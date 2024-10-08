@@ -35,11 +35,22 @@ const SideBar = ({ isOpen, setIsOpen }) => {
 
         <div>
           {isOpen ? ( // Conditional rendering for the input box
+          <div className="relative">
             <input
               placeholder="New Thread"
-              className="bg-secondary cursor-pointer rounded-l-full rounded-r-full mt-5 p-2 w-full hover:border-cyan-400"
+              className="bg-secondary cursor-pointer text-sm rounded-l-full rounded-r-full mt-5 p-2 w-full hover:border-cyan-400"
               style={{ border: "2px solid rgba(255, 255, 255, 0.1)" }}
+              
             />
+            {/* Text spans for "Ctrl" and "I" */}
+          <span className="absolute text-sm right-7 top-1/2 mr-2 transform rounded-lg tracking-widest px-1  text-gray-500" style={{ border: "2px solid rgba(255, 255, 255, 0.1)" }}>
+            Ctrl
+          </span>
+          <span className="absolute text-sm right-4 top-1/2  transform rounded-lg px-1  text-gray-500" style={{ border: "2px solid rgba(255, 255, 255, 0.1)" }}>
+            I
+          </span>   
+            </div>
+            
           ) : (
             <div className="bg-secondary rounded-full mt-8 ml-5 p-2 scale-150 inline-block">
               <FiPlus />
