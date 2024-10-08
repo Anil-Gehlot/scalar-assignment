@@ -113,7 +113,7 @@ const CardDetails = () => {
 
                 <div className="mb-4 flex items-center justify-between border-borderMain/50 ring-borderMain/50 divide-borderMain/50 dark:divide-borderMainDark/50  dark:ring-borderMainDark/50 dark:border-borderMainDark/50 bg-transparent">
                   <div className="relative">
-                    <div className="pointer-events-none flex items-center gap-2 text-gray-400 font-medium  opacity-0 grayscale duration-150 !pointer-events-auto !opacity-100 !grayscale-0">
+                    <div className=" flex items-center gap-2 text-gray-400 font-medium duration-150 !pointer-events-auto !opacity-100 !grayscale-0">
                       <div className="relative">
                         <div className="relative flex aspect-square shrink-0 items-center justify-center rounded-full h-8 w-8 border-borderMain/50 ring-borderMain/50 divide-borderMain/50 dark:divide-borderMainDark/50  dark:ring-borderMainDark/50 dark:border-borderMainDark/50 bg-offsetPlus dark:bg-offsetPlusDark">
                           <img
