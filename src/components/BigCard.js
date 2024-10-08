@@ -1,6 +1,5 @@
 import React from "react";
 import { LiaBookmarkSolid } from "react-icons/lia";
-import { Navigate } from "react-router-dom";
 
 const BigCard = ({
   title,
@@ -29,11 +28,11 @@ const BigCard = ({
               <div className="relative overflow-hidden h-full w-full rounded-none">
                 <div className="h-full w-full">
                   <div className="w-full h-full">
-                    <div className="bg-offset dark:bg-offsetDark group relative h-full w-full overflow-hidden rounded-none rounded-md">
+                    <div className="bg-offset dark:bg-offsetDark group relative h-full w-full overflow-hidden rounded-md">
                       <div className="absolute inset-0" />
                       <img
                         alt={title}
-                        className="h-full w-full object-cover !object-cover transition-all ease-in-out"
+                        className="h-full w-full object-cover  transition-all ease-in-out"
                         src={imageUrl}
                       />
                     </div>
@@ -81,7 +80,7 @@ const BigCard = ({
                     <button
                       aria-label="Save to Bookmarks"
                       type="button"
-                      className="focus-visible:bg-offsetPlus dark:focus-visible:bg-offsetPlusDark md:hover:bg-offsetPlus text-textOff dark:text-textOffDark md:hover:text-textMain dark:md:hover:bg-offsetPlusDark  dark:md:hover:text-textMainDark -mr-2.5 hover:opacity-100 [&:focus-visible]:!ring-2 ring-super/50 md:opacity-70 opacity-100 font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group/button  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8"
+                      className="focus-visible:bg-offsetPlus dark:focus-visible:bg-offsetPlusDark md:hover:bg-offsetPlus text-textOff dark:text-textOffDark md:hover:text-textMain dark:md:hover:bg-offsetPlusDark  dark:md:hover:text-textMainDark -mr-2.5 hover:opacity-100 [&:focus-visible]:!ring-2 ring-super/50 md:opacity-70 opacity-100 font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out  select-none relative group/button  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8"
                       data-state="closed"
                     >
                       <div className="flex items-center  justify-center gap-xs text-white">
