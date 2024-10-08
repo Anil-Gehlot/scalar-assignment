@@ -141,10 +141,10 @@ const CardDetails = () => {
                     </div>
                   </div>
                   <div className="flex items-center gap-x-xs">
-                    <div className="flex w-full items-center gap-2 border-borderMain/50 ring-borderMain/50 divide-borderMain/50 dark:divide-borderMainDark/50  dark:ring-borderMainDark/50 dark:border-borderMainDark/50 bg-transparent">
+                    <div className="flex w-full items-center gap-2 border-borderMain/50 ring-borderMain/50 divide-borderMain/50 dark:divide-borderMainDark/50 dark:ring-borderMainDark/50 dark:border-borderMainDark/50 bg-transparent">
                       <div className="flex items-end gap-md">
                         <div
-                          className="gap-x-xs flex cursor-default items-center light font-medium gap-1  text-gray-400 text-sm text-textOff dark:text-textOffDark selection:bg-super/50 selection:text-textMain dark:selection:bg-superDuper/10 dark:selection:text-superDark"
+                          className="gap-x-xs flex cursor-default items-center light font-medium gap-1 text-gray-400 text-sm text-textOff dark:text-textOffDark selection:bg-super/50 selection:text-textMain dark:selection:bg-superDuper/10 dark:selection:text-superDark"
                           data-state="closed"
                         >
                           <span className="">
@@ -154,9 +154,11 @@ const CardDetails = () => {
                         </div>
                       </div>
                       <div className="w-full flex-1" />
-                      <div className="flex gap-md">
+
+                      {/* Wrap this part to hide on small screens */}
+                      <div className="hidden md:flex gap-md">
                         <div
-                          className="flex items-center light font-medium gap-1  text-gray-400 text-sm text-textOff dark:text-textOffDark selection:bg-super/50 selection:text-textMain dark:selection:bg-superDuper/10 dark:selection:text-superDark"
+                          className="flex items-center light font-medium gap-1 text-gray-400 text-sm text-textOff dark:text-textOffDark selection:bg-super/50 selection:text-textMain dark:selection:bg-superDuper/10 dark:selection:text-superDark"
                           data-state="closed"
                         >
                           <span>
@@ -165,10 +167,13 @@ const CardDetails = () => {
                           <span className="truncate">9000</span>
                         </div>
                       </div>
+
                       <div className="w-full flex-1" />
-                      <div className="flex gap-md">
+
+                      {/* Wrap this part to hide on small screens */}
+                      <div className="hidden md:flex gap-md">
                         <div
-                          className="flex items-center light font-medium gap-1  text-gray-400 text-sm text-textOff dark:text-textOffDark selection:bg-super/50 selection:text-textMain dark:selection:bg-superDuper/10 dark:selection:text-superDark"
+                          className="flex items-center light font-medium gap-1 text-gray-400 text-sm text-textOff dark:text-textOffDark selection:bg-super/50 selection:text-textMain dark:selection:bg-superDuper/10 dark:selection:text-superDark"
                           data-state="closed"
                         >
                           <span>
