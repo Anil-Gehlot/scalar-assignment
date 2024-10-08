@@ -16,6 +16,7 @@ const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <Navigate to="/discover" replace />, // Redirect root path to /discover
+    errorElement: <Navigate to="/discover" replace />
   },
   {
     path: "/discover",
