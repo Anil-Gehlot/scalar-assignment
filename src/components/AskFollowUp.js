@@ -1,35 +1,55 @@
 import React from "react";
+import { BiGitRepoForked } from "react-icons/bi";
+import { useState } from "react";
 
 const AskFollowUp = () => {
+  const [isToggled, setIsToggled] = useState(false); // State to manage toggle
+
+  const handleToggle = () => {
+    setIsToggled((prev) => !prev); // Toggle state
+  };
   return (
-    <div className="border rounded-l-full rounded-r-full bg-primary z-50 fixed left-0 right-0 mx-auto max-w-2xl bottom-10 flex -translate-y-md justify-center md:!bottom-lg md:left-sideBarWidth md:right-sm md:translate-y-0">
-      <div className="flex flex-col gap-md md:gap-xl w-full md:grid justify-center px-md md:px-lg">
-        <div className="col-span-8 flex justify-center">
-          <div className="pointer-events-none grid w-full grid-cols-1 grid-rows-1">
-            <div className="transform-gpu col-start-1 row-start-1 duration-150 ease-out translate-y-[20px] flex justify-center items-end !delay-200 !opacity-100 [&>*]:pointer-events-auto !translate-y-[0px]">
-              <div className="w-full border-borderMain/50 ring-borderMain/50 divide-borderMain/50 dark:divide-borderMainDark/50  dark:ring-borderMainDark/50 dark:border-borderMainDark/50 bg-transparent">
-                <div className="relative flex w-full items-center justify-end gap-x-xs">
-                  <div>
-                    <div>
-                      <span className="grow block">
-                        <div className="rounded-full md:p-sm bg-offset dark:bg-offsetDark">
-                          <div className="item-center  w-full outline-none focus:outline-none focus:ring-borderMain font-sans flex items-center dark:bg-offsetDark dark:text-textMainDark placeholder-textOff shadow-sm rounded-t-[32px] rounded-b-[32px] py-sm px-sm">
-                            <div className="flex-grow flex-shrink p-sm rounded-full order-1 overflow-hidden relative flex h-full w-full">
-                              <input
-                                placeholder="Ask follow-up"
-                                className="bg-primary w-96 p-3  overflow-auto max-h-[45vh] flex  text-center justify-center lg:max-h-[40vh] sm:max-h-[25vh]   font-sans caret-superDuper resize-none selection:bg-superDuper selection:text-textMain dark:bg-offsetDark dark:text-textMainDark dark:placeholder-textOffDark bg-background text-textMain placeholder-textOff scrollbar-thumb-idle dark:scrollbar-thumb-idleDark scrollbar-thin scrollbar-track-transparent"
-                                autoComplete="off"
-                                data-1p-ignore="true"
-                                // style={{ height: "24px !important" }}
-                                defaultValue={""}
-                              />
-                            </div>
-                            <div className="bg-background dark:bg-offsetDark flex rounded-l-lg order-0" />
-                          </div>
-                        </div>
-                      </span>
-                    </div>
-                  </div>
+    <div className="rounded-full z-50 fixed left-0 right-0 mx-auto max-w-xl bottom-10 flex justify-center">
+      <div className="flex w-full justify-center px-4">
+        <div className="w-full">
+          <div className="w-full flex justify-center">
+            <div className="w-full">
+              <div className="bg-offset dark:bg-offsetDark w-full rounded-full">
+                <div
+                  className="relative w-full rounded-full"
+                  style={{ border: "5px solid gray" }}
+                >
+                  <input
+                    placeholder="Ask follow-up"
+                    className="w-full bg-primary text-white font-medium p-5 pl-5 pr-12 rounded-full shadow-sm outline-none focus:ring-2 focus:ring-borderMain dark:bg-offsetDark dark:text-textMainDark dark:placeholder-textOffDark"
+                    style={{ border: "2px solid rgba(255, 255, 255, 0.3)" }}
+                  />
+                  {/* Icon/logo on the right */}
+                  <span className="absolute inset-y-0 right-4 flex items-center p-3 ">
+
+                    {/* Toggle switch next to the logo */}
+                    <span className="hidden sm:flex items-center gap-2 ">
+
+                      <button
+                        onClick={handleToggle}
+                        className={`relative inline-flex items-center h-6 rounded-full w-11 transition-colors duration-200 ${
+                          isToggled ? "bg-gray-400" : "bg-gray-600"
+                        }`}
+                      >
+                        <span
+                          className={`transform transition-transform duration-200 block w-5 h-5 bg-white rounded-full ${
+                            isToggled ? "translate-x-5" : "translate-x-1"
+                          }`}
+                        />
+                      </button> <span className="text-gray-400">Pro</span>
+                    </span>
+
+                    <span className="ml-3 hidden sm:block">
+                    <BiGitRepoForked />
+                    </span>
+
+
+                  </span>
                 </div>
               </div>
             </div>
