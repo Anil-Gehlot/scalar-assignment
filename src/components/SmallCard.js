@@ -73,7 +73,7 @@ const SmallCard = ({
                     <button
                       aria-label="Save to Bookmarks"
                       type="button"
-                      className="focus-visible:bg-offsetPlus dark:focus-visible:bg-offsetPlusDark md:hover:bg-offsetPlus text-textOff dark:text-textOffDark md:hover:text-textMain dark:md:hover:bg-offsetPlusDark  dark:md:hover:text-textMainDark -mr-2.5 hover:opacity-100 [&:focus-visible]:!ring-2 ring-super/50 md:opacity-70 opacity-100 font-sans focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none items-center relative group/button  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8"
+                      className="focus-visible:bg-offsetPlus dark:focus-visible:bg-offsetPlusDark md:hover:bg-offsetPlus text-textOff dark:text-textOffDark md:hover:text-textMain dark:md:hover:bg-offsetPlusDark  dark:md:hover:text-textMainDark -mr-2.5 hover:opacity-100 [&:focus-visible]:!ring-2 ring-super/50 md:opacity-70 opacity-100 focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans  select-none relative group/button  justify-center text-center items-center rounded-full cursor-point active:scale-95 origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8"
                       data-state="closed"
                     >
                       <div className="flex items-center  justify-center gap-xs text-white">
