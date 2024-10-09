@@ -9,21 +9,21 @@ import {
 } from "react-router-dom";
 import CardsContainer from "./components/CardsContainer";
 import CardDetails from "./components/CardDetails";
+import HomePage from "./components/HomePage";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 const appRouter = createBrowserRouter([
   {
     path: "/",
-    element: <Navigate to="/discover" replace />, // Redirect root path to /discover
-    errorElement: <Navigate to="/discover" replace />
-  },
-  {
-    path: "/discover",
-    element: <App />,
+    element: <App />, // Redirect root path to /discover
     children: [
       {
-        path: "/discover",
+        path: "/",
+        element: <HomePage />,
+      },
+      {
+        path: "discover",
         element: <CardsContainer />,
       },
       {
@@ -35,4 +35,3 @@ const appRouter = createBrowserRouter([
 ]);
 
 root.render(<RouterProvider router={appRouter} />);
-
