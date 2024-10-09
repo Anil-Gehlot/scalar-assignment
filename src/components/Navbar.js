@@ -4,6 +4,7 @@ import { TfiAndroid } from "react-icons/tfi";
 import { CiDollar } from "react-icons/ci";
 import { MdOutlineColorLens } from "react-icons/md";
 import { CiMedal } from "react-icons/ci";
+import { BsSliders } from "react-icons/bs";
 import { BsTv } from "react-icons/bs";
 
 // NavbarItem Component
@@ -30,11 +31,25 @@ const ScrollableContainer = () => {
   ];
 
   return (
-    <div className="relative z-0 -mx-md flex min-w-0 snap-x snap-mandatory overflow-y-auto duration-1000 scrollbar-none md:mx-0">
+    <div className="relative z-1 -mx-md flex min-w-0 snap-x snap-mandatory overflow-y-auto duration-1000 scrollbar-hidden md:mx-0">
       <div className="w-md shrink-0 snap-start md:hidden " />
       {items.map((item) => (
         <NavbarItem key={item.title} label={item} />
       ))}
+      <div className="hidden md:flex items-center">
+        <button
+          type="button"
+          className="bg-offsetPlus dark:bg-offsetPlusDark text-textMain dark:text-textMainDark hover:text-textOff dark:hover:text-textOffDark focus:outline-none outline-none outline-transparent transition duration-300 ease-in-out font-sans select-none item-center relative group/button justify-center text-center items-center rounded-full cursor-pointer active:scale-95 origin-center whitespace-nowrap inline-flex text-sm aspect-square h-8"
+          data-state="closed"
+        >
+          <div className="flex items-center min-w-0 justify-center gap-xs">
+            <span className="text-white bg-neutral-700 p-2 rounded-full">
+              <BsSliders />
+            </span>
+          </div>
+        </button>
+      </div>
+
       <div className="w-md shrink-0 snap-start md:hidden" />
     </div>
   );
