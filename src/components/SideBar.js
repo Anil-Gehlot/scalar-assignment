@@ -57,13 +57,13 @@ const SideBar = ({ isOpen, setIsOpen }) => {
               />
               {/* Text spans for "Ctrl" and "I" */}
               <span
-                className="absolute text-xs right-7 top-1/2 mr-2 transform rounded-lg tracking-widest px-1  text-gray-500"
+                className="absolute text-xs right-7 top-1/2 mr-2 transform rounded-lg tracking-widest px-1  text-gray-500 hidden lg:block"
                 style={{ border: "2px solid rgba(255, 255, 255, 0.1)" }}
               >
                 Ctrl
               </span>
               <span
-                className="absolute text-xs right-4 top-1/2  transform rounded-lg px-1  text-gray-500"
+                className="absolute text-xs right-4 top-1/2  transform rounded-lg px-1  text-gray-500 hidden md:hidden lg:block"
                 style={{ border: "2px solid rgba(255, 255, 255, 0.1)" }}
               >
                 I
