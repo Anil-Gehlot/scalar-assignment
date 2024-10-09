@@ -3,12 +3,12 @@ import BigCard from "./BigCard";
 import SmallCard from "./SmallCard";
 import { articleList } from "../utils/constant";
 import Navbar from "./Navbar";
-import { Link } from "react-router-dom";
+import { BsSliders } from "react-icons/bs";
 
 const CardsContainer = () => {
   return (
     <div
-      className="bg-secondary mt-2 rounded-md px-6"
+      className="bg-secondary mt-2 rounded-md mr-3"
       style={{ border: "2px solid rgba(255, 255, 255, 0.1)" }}
     >
       <div
@@ -17,7 +17,7 @@ const CardsContainer = () => {
       >
         <div className="absolute inset-0 bg-background opacity-90 dark:bg-backgroundDark" />
         <div className="ease relative flex w-full items-center justify-between px-md duration-150 md:px-lg max-w-screen-md">
-          <h1 className="text-white flex items-center gap-1 default font-display text-2xl md:text-3xl text-textMain dark:text-textMainDark selection:bg-super/50 selection:text-textMain dark:selection:bg-superDuper/10 dark:selection:text-superDark">
+          <h1 className="text-white flex items-center gap-1 ml-3 default font-display text-2xl md:text-3xl text-textMain dark:text-textMainDark selection:bg-super/50 selection:text-textMain dark:selection:bg-superDuper/10 dark:selection:text-superDark">
             <svg
               aria-hidden="true"
               focusable="false"
@@ -44,21 +44,7 @@ const CardsContainer = () => {
             data-state="closed"
           >
             <div className="flex items-center min-w-0 justify-center gap-xs">
-              <svg
-                aria-hidden="true"
-                focusable="false"
-                data-prefix="far"
-                data-icon="sliders"
-                className="svg-inline--fa fa-sliders fa-fw fa-1x "
-                role="img"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-              >
-                <path
-                  fill="currentColor"
-                  d="M0 416c0 13.3 10.7 24 24 24l59.7 0c10.2 32.5 40.5 56 76.3 56s66.1-23.5 76.3-56L488 440c13.3 0 24-10.7 24-24s-10.7-24-24-24l-251.7 0c-10.2-32.5-40.5-56-76.3-56s-66.1 23.5-76.3 56L24 392c-13.3 0-24 10.7-24 24zm128 0a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM320 256a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm32-80c-35.8 0-66.1 23.5-76.3 56L24 232c-13.3 0-24 10.7-24 24s10.7 24 24 24l251.7 0c10.2 32.5 40.5 56 76.3 56s66.1-23.5 76.3-56l59.7 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-59.7 0c-10.2-32.5-40.5-56-76.3-56zM192 128a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm76.3-56C258.1 39.5 227.8 16 192 16s-66.1 23.5-76.3 56L24 72C10.7 72 0 82.7 0 96s10.7 24 24 24l91.7 0c10.2 32.5 40.5 56 76.3 56s66.1-23.5 76.3-56L488 120c13.3 0 24-10.7 24-24s-10.7-24-24-24L268.3 72z"
-                />
-              </svg>
+            <span className="text-white bg-neutral-700 p-2 rounded-full mr-6 "><BsSliders /></span>
             </div>
           </button>
         </div>
@@ -69,7 +55,7 @@ const CardsContainer = () => {
           <div className="w-full md:w-auto col-span-12">
             <Navbar />
 
-            <div className="flex grid-cols-3 flex-col gap-5 md:grid ">
+            <div className="flex grid-cols-3 flex-col gap-5 mt-1 md:grid px-5 ">
               {articleList.map((item, index) => {
                 // Check if the index is 0 or a multiple of 4 (0, 4, 8,...)
                 if (index % 4 === 0) {
