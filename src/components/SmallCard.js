@@ -1,5 +1,6 @@
 import React from "react";
 import { LiaBookmarkSolid } from "react-icons/lia";
+import { Link } from "react-router-dom";
 
 const SmallCard = ({
   title,
@@ -11,10 +12,9 @@ const SmallCard = ({
 }) => {
   return (
     <div>
-      <a
+      <Link to={link}
         className="group/SmallCard block h-full outline-none"
-        href={"discover" + link}
-      >
+        >
         <div className="relative h-full rounded-lg duration-150 group-hover/SmallCard:-translate-y-[1px] group-active/SmallCard:scale-[0.99] hover:opacity-95 dark:shadow-lg group-hover/SmallCard:dark:shadow-xl border-borderMain/50 ring-borderMain/50 divide-borderMain/50 dark:divide-borderMainDark/50  dark:ring-borderMainDark/50 dark:border-borderMainDark/50 bg-offset dark:bg-offsetDark">
           <div className="pointer-events-none absolute inset-0 z-[4] rounded-[inherit] border md:!border-borderMain md:opacity-20 md:dark:opacity-20" />
           <div className="relative flex h-full flex-col items-center">
@@ -87,7 +87,7 @@ const SmallCard = ({
           </div>
           <div className="pointer-events-none absolute inset-x-0 inset-y-0 z-[1] rounded-inherit border-2 !border-transparent duration-150 group-[&:focus-visible]/SmallCard:!border-super/40" />
         </div>
-      </a>
+      </Link>
     </div>
   );
 };
