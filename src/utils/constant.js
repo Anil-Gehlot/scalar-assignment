@@ -66,15 +66,15 @@ export const articleList = [
       "https://imagedelivery.net/MPdwyYSWT8IY7lxgN3x3Uw/831bd9b7-78f7-4d06-7380-44809b816500/thumbnail",
   },
   {
-    title: "Broadcom Joins Magnificent 7",
+    title: "The .io Ownership Battle",
     description:
-      "According to reports from the Financial Times and Variety, legendary British rock band Pink Floyd has sold their recorded music catalog, along with name and likeness rights, to Sony Music for approximately $400 million, marking one of the largest such deals in recent years.",
+      "The .io domain, linked to the British Indian Ocean Territory, is at the center of a contentious ownership battle involving the UK, Mauritius, and the Chagossian people, as geopolitical shifts and ethical concerns about digital colonialism emerge with the UK's decision to transfer control of the Chagos Archipelago to Mauritius.",
     imageUrl:
-      "https://pplx-res.cloudinary.com/image/upload/t_thumbnail/v1728159268/server_uploads/vi1b0lmsv5dxvsel6rjg.jpg",
-    link: "page/rock-and-pink-floyd",
-    author: "stephenhoban",
+      "https://pplx-res.cloudinary.com/image/upload/t_thumbnail/v1727987295/user_uploads/fwcqpgmox/io.jpg",
+    link: "/page/the-io-ownership-battle-disput-vau4oy5fSbuvP4D.7aQPPg",
+    author: "elymc",
     authorImage:
-      "https://imagedelivery.net/MPdwyYSWT8IY7lxgN3x3Uw/6e59b304-1220-44e5-d6e3-ea17b0c8aa00/thumbnail",
+      "https://imagedelivery.net/MPdwyYSWT8IY7lxgN3x3Uw/831bd9b7-78f7-4d06-7380-44809b816500/thumbnail",
   },
   {
     title: "Extinct Biblical Tree Regrown",
