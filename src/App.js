@@ -17,7 +17,7 @@ function App() {
         <SideBar isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
       <div
-        className={`h-screen overflow-y-auto  w-full ${
+        className={`h-screen overflow-y-auto scrollbar-hidden  w-full ${
           !isOpen ? "w-full" : "w-[88.5%]"
         }`}
       >
