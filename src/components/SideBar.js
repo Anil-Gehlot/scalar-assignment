@@ -9,6 +9,7 @@ import { RiArrowRightUpLine } from "react-icons/ri";
 import { BiArrowToLeft } from "react-icons/bi";
 import { LuArrowRightToLine } from "react-icons/lu";
 import { FiPlus } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const SideBar = ({ isOpen, setIsOpen }) => {
   const toggleSidebar = () => {
@@ -17,40 +18,57 @@ const SideBar = ({ isOpen, setIsOpen }) => {
 
   return (
     <div
-      className={`flex flex-col text-white ml-4 mr-4 h-screen transition-all ${
+      className={`flex flex-col text-white ml-4 mr-4 h-screen transition-all ease-in-out ${
         isOpen ? "" : "w-20"
       }`}
     >
       <div className="mt-xs grow">
         <div className="flex items-center justify-between mt-4 ">
-          <img
-            src={isOpen ? "/logo.png" : "/Off-White@2x.png"}
-            alt="logo"
-            className=" group w-36 scale-105 "
-          />
-          <span onClick={toggleSidebar} className="cursor-pointer">
+          <Link to={"/"}>
+            <img
+              src={isOpen ? "/logo.png" : "/Off-White@2x.png"}
+              alt="logo"
+              className={`group w-36 scale-105 cursor-pointer ${!isOpen && "w-16"}`}
+            />
+          </Link>
+          <span
+            onClick={toggleSidebar}
+            className={` ${isOpen ? "": "hidden"} cursor-pointer text-gray-400 ml-4 scale-100`}
+          >
             <BiArrowToLeft />
           </span>
         </div>
 
         <div>
           {isOpen ? ( // Conditional rendering for the input box
-          <div className="relative">
-            <input
-              placeholder="New Thread"
-              className="bg-secondary cursor-pointer text-sm rounded-l-full rounded-r-full mt-5 p-2 w-full hover:border-cyan-400"
-              style={{ border: "2px solid rgba(255, 255, 255, 0.1)" }}
-              
-            />
-            {/* Text spans for "Ctrl" and "I" */}
-          <span className="absolute text-sm right-7 top-1/2 mr-2 transform rounded-lg tracking-widest px-1  text-gray-500" style={{ border: "2px solid rgba(255, 255, 255, 0.1)" }}>
-            Ctrl
-          </span>
-          <span className="absolute text-sm right-4 top-1/2  transform rounded-lg px-1  text-gray-500" style={{ border: "2px solid rgba(255, 255, 255, 0.1)" }}>
-            I
-          </span>   
+            <div className="relative">
+              <input
+                placeholder="New Thread"
+                className="bg-secondary cursor-pointer text-xs font-semibold rounded-l-full rounded-r-full mt-5 px-3 p-2 w-full  hover:!border-cyan-400 "
+                style={{
+                  border: "2px solid rgba(255, 255, 255, 0.1)",
+                  transition: "border-color 0.1s ease, border-width 0.3s ease",
+                  boxSizing: "border-box",
+                }}
+                onMouseEnter={(e) => (e.target.style.border = "1px solid cyan")}
+                onMouseLeave={(e) =>
+                  (e.target.style.border = "1px solid rgba(255, 255, 255, 0.1)")
+                }
+              />
+              {/* Text spans for "Ctrl" and "I" */}
+              <span
+                className="absolute text-xs right-7 top-1/2 mr-2 transform rounded-lg tracking-widest px-1  text-gray-500"
+                style={{ border: "2px solid rgba(255, 255, 255, 0.1)" }}
+              >
+                Ctrl
+              </span>
+              <span
+                className="absolute text-xs right-4 top-1/2  transform rounded-lg px-1  text-gray-500"
+                style={{ border: "2px solid rgba(255, 255, 255, 0.1)" }}
+              >
+                I
+              </span>
             </div>
-            
           ) : (
             <div className="bg-secondary rounded-full mt-8 ml-5 p-2 scale-150 inline-block">
               <FiPlus />
@@ -58,10 +76,10 @@ const SideBar = ({ isOpen, setIsOpen }) => {
           )}
         </div>
 
-        <div className="pt-7 flex flex-col gap-4 text-lg text-gray-400 font-normal ">
+        <div className="pt-7 flex flex-col gap-2 text-lg  text-gray-400 font-bold ">
           <div
             className={`${
-              !isOpen && "ml-5 w-96"
+              !isOpen && "ml-4 w-8"
             }  flex items-center gap-2 p-1 rounded-md hover:text-white hover:bg-third cursor-pointer`}
           >
             {" "}
@@ -69,7 +87,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
           </div>
           <div
             className={`${
-              !isOpen && "ml-5 w-96"
+              !isOpen && "ml-4 w-8"
             }  flex items-center gap-2 p-1 rounded-md hover:text-white hover:bg-third cursor-pointer`}
           >
             {" "}
@@ -78,7 +96,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
           </div>
           <div
             className={`${
-              !isOpen && "ml-5 w-96"
+              !isOpen && "ml-4 w-8 "
             }  flex items-center gap-2 p-1 rounded-md hover:text-white hover:bg-third cursor-pointer`}
           >
             <TbLibraryPlus />{" "}
@@ -86,7 +104,7 @@ const SideBar = ({ isOpen, setIsOpen }) => {
           </div>
           <div
             className={`${
-              !isOpen && "ml-5 w-96"
+              !isOpen && "ml-4 w-8"
             }  flex items-center gap-2 p-1 rounded-md hover:text-white hover:bg-third cursor-pointer`}
           >
             <FaArrowRightToBracket />{" "}
