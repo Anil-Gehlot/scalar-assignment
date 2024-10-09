@@ -27,7 +27,7 @@ const CardDetails = () => {
 
   return (
     <div
-      className="bg-secondary mt-2 rounded-md px-6"
+      className="bg-secondary mt-2 rounded-md mr-3 "
       style={{ border: "2px solid rgba(255, 255, 255, 0.1)" }}
     >
       <div
@@ -35,7 +35,8 @@ const CardDetails = () => {
         className="p-1 relative z-20 flex h-16 shrink-0 justify-end border-b backdrop-blur-lg md:h-[50px] border-borderMain/50 ring-borderMain/50 divide-borderMain/50 dark:divide-borderMainDark/50  dark:ring-borderMainDark/50 dark:border-borderMainDark/50 bg-transparent"
       >
         <div className="absolute inset-0 bg-background opacity-90 dark:bg-backgroundDark" />
-        <div className="gap-2 ease mr-0 relative flex w-full items-center justify-end px-md duration-150 md:px-lg max-w-screen-md">
+         <span className="w-full sm:flex self-center lg:hidden ml-4"><img src="/logo.png" className="w-40" /></span>
+        <div className="gap-2 ease mr-0 relative hidden md:flex w-full items-center justify-end px-md duration-150 md:px-lg max-w-screen-md">
           <button
             className="border h-7 text-white opacity-65 px-2.5 py-2 rounded-md items-center flex"
             style={{ border: "2px solid rgba(255, 255, 255, 0.2)" }}
@@ -51,7 +52,7 @@ const CardDetails = () => {
         </div>
       </div>
 
-      <div className="mx-auto h-full w-full max-w-screen-md px-md md:px-lg text-white">
+      <div className="mx-auto h-full w-full max-w-screen-md px-md md:px-lg text-white px-6">
         <div className="ease mb-xl flex grid-cols-12 gap-xl duration-150 md:grid isolate md:isolation-auto">
           <div className="w-full md:w-auto col-span-12">
             <div className="flex flex-col grid-cols-12 gap-md md:gap-xl max-w-threadWidth w-full md:grid">
@@ -90,7 +91,7 @@ const CardDetails = () => {
                 </div>
 
                 {/* Heading */}
-                <div className="flex items-center gap-lg mt-4">
+                <div className="flex items-center gap-lg mt-4 overflow-auto">
                   <div
                     className="w-full"
                     style={{ willChange: "auto", height: "107.5px" }}
@@ -187,7 +188,7 @@ const CardDetails = () => {
                 </div>
 
                 {/* Description */}
-                <div className="line-clamp-4 font-medium text-white opacity-75 text-lg leading-snug text-textOff dark:text-textOffDark selection:bg-super/50 selection:text-textMain dark:selection:bg-superDuper/10 dark:selection:text-superDark">
+                <div className="mb-28 line-clamp-4 font-medium text-white opacity-75 text-lg leading-snug text-textOff dark:text-textOffDark selection:bg-super/50 selection:text-textMain dark:selection:bg-superDuper/10 dark:selection:text-superDark">
                   {Array.from({ length: 50 }).map((_, index) => (
                     <div
                       key={index}
